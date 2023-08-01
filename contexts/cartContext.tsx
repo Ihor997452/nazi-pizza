@@ -38,11 +38,11 @@ export const CartContextProvider = ({ children }: any) => {
     });
 
     const add = (item: InputCartItem) => {
-        const cartCopy = structuredClone(cart);
+        const cartCopy: any = structuredClone(cart);
 
         let itemExists = false;
         for (let i = 0; i < cartCopy.items.length; i++) {
-            const element = cartCopy.items[i];
+            const element: any = cartCopy.items[i];
 
             if (item._id === element._id && item.option === element.option) {
                 itemExists = true;
