@@ -66,7 +66,6 @@ export const CartContextProvider = ({ children }: any) => {
                 name: item.name,
             });
         }
-
         let total = 0;
 
         for (let i = 0; i < cartCopy.items.length; i++) {
