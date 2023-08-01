@@ -7,7 +7,9 @@ export default function Home() {
     const [pizzas, setPizzas] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch('api/pizzas').then((r) => r.json().then((r) => setPizzas(r)));
+        fetch('api/pizzas')
+            .then((r) => r.json().then((r) => setPizzas(r)))
+            .catch((r) => console.log(r));
     }, []);
 
     return (
