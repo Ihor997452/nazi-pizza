@@ -4,7 +4,7 @@ import Pizza from '@/components/pizza/pizza';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-    const [pizzas, setPizzas] = useState([]);
+    const [pizzas, setPizzas] = useState<any[]>([]);
 
     useEffect(() => {
         fetch('api/pizzas').then((r) => r.json().then((r) => setPizzas(r)));
